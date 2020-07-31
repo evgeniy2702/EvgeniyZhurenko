@@ -1,5 +1,6 @@
 package Pattern;
 
+<<<<<<< HEAD
 import Pattern.PastaAddition.PastaAdditionFactoryMethod;
 import Pattern.PastaSouse.PastaSouse;
 import Pattern.PastaSouse.PastaSouseFactoryMethod;
@@ -7,6 +8,8 @@ import Pattern.PastaStuffing.PastaStaffingFactoryMethod;
 
 import java.util.Objects;
 
+=======
+>>>>>>> 9d52b40e88720260337c5704245b5124a64c6b8f
 public class Run {
 
 //    Задание 4
@@ -18,6 +21,7 @@ public class Run {
 //■ Начинка;
 //■ Добавки.
 //    Для реализации используйте порождающие паттерны.
+<<<<<<< HEAD
 
     public Run(){};
 
@@ -49,4 +53,6 @@ public class Run {
         pastaAddition.addIngredient("Pork meat");
         pastaAddition.info();
     }
+=======
+>>>>>>> 9d52b40e88720260337c5704245b5124a64c6b8f
 }
