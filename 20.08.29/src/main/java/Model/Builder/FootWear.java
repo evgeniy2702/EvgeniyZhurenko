@@ -63,11 +63,11 @@ public class FootWear {
     @Override
     public String toString() {
         return "FootWear : " +
-                "view :" + view + "; " +
-                "size :" + size +  "; " +
-                "type :" + type + "; " +
-                "color :" + color +  "; " +
-                "price :" + price + "; " +
-                "manufacturer :" + manufacturer;
+                "view :" + view.toString() + "; " +
+                "size :" + size.toString() +  "; " +
+                "type :" + type.toString() + "; " +
+                "color :" + color.toString() +  "; " +
+                "price :" + price.toString() + "; " +
+                "manufacturer :" + manufacturer.toString();
     }
 }

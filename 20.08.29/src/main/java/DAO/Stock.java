@@ -32,6 +32,4 @@ public class Stock {
             System.out.println("На складе пока нет продукции");
         }
     }
-
-
 }
