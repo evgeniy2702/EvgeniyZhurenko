@@ -13,17 +13,27 @@ public class FootView {
     FootManufacture footManufacture;
     FootController footController = new FootController();
 
+    // Конструтор, который запускает сразу же метод запуска приложения при создании объекта
+    // данного класса
+
     public FootView() throws InterruptedException {
         startEnd();
     }
+
+    // Создаем объект класса сканер для использования дальше в методах данного класса
 
     Scanner scanner() {
         return new Scanner(System.in);
     }
 
+    //Метод возвращает созданный объект класса FootWearBuilder
+
     public FootWearBuilder getFoot() {
         return foot;
     }
+
+    //Старт приложения, где необходимо задать путь выполнения приложением программы
+    //через выбор варинтов ее выполнения
 
     public void startEnd() throws InterruptedException {
         while (true) {
@@ -52,6 +62,8 @@ public class FootView {
                 }
             }
 
+            // Метод, который отвечает за выбор типа обуви Мужская или Женская
+
     public Type choiceType() throws InterruptedException {
         while (true) {
             System.out.println("Какую обувь делаем :\n1. Мужская\n2. Женская\n3. Вернуться к предыдущему меню");
@@ -74,6 +86,8 @@ public class FootView {
             }
         }
     }
+
+    //Метод, который отвечает за выбор вида обуви
 
     public View choiceView() throws InterruptedException {
         while (true) {
@@ -98,6 +112,8 @@ public class FootView {
         }
     }
 
+    //Метод, который отвечает за выбор цвета обуви
+
     public Color choiceColor() throws InterruptedException {
         while (true) {
             System.out.println("Выбирите цвет обуви :\n1. Красный\n2. Черый\n3. Серый\n4. Сининй\n5. Вернуться к предыдущему меню");
@@ -119,6 +135,8 @@ public class FootView {
             }
         }
     }
+
+    //Метод, который отвечает за выбор размера обуви
 
     public Size choiceSize() throws InterruptedException {
         while (true) {
@@ -142,6 +160,9 @@ public class FootView {
         }
     }
 
+    //Метод, который отвечает за выбор производителя, на площадях которого
+    //планируется производить обувь заданной модели
+
     public Manufacture choiceManufacture() throws InterruptedException {
         while (true) {
             System.out.println("Выбирите производителя :\n1. производитель_1\n2. производитель_2\n3. производитель_3\n4. Вернуться к предыдущему меню");
@@ -163,6 +184,8 @@ public class FootView {
             }
         }
     }
+
+    //Метод расчета стоимости модели обуви, учитывая все ее параметры и производителя
 
     public double getPriceFoot() throws InterruptedException {
         while (true) {
@@ -236,6 +259,8 @@ public class FootView {
         }
     }
 
+    // Метод, который отвечает за выбор проивзодить или нет заданную модель обуви по расчитанной цене
+
     public FootManufacture done(double price) throws InterruptedException {
         while (true) {
             System.out.println("Создаем модель обуви по расчетной цене " + price + "\n1. ДА\n2. НЕТ");
@@ -265,6 +290,8 @@ public class FootView {
         }
     }
 
+    //Метод создания модели обуви по ранее определенным параметрам
+
     public FootWearBuilder createFootModel() throws InterruptedException {
         foot = new FootWearBuilder();
         foot.setType(choiceType());
@@ -275,6 +302,8 @@ public class FootView {
         foot.setPrice(getPriceFoot());
         return foot;
     }
+
+    //Метод имитации ОТК приема партии обуви на склад
 
     public boolean OTK() {
         while (true) {
@@ -295,6 +324,8 @@ public class FootView {
             }
         }
     }
+
+    //Метод записи произведенной партии обуви на склад производства после прохождения ОТК
 
     public void stock(FootManufacture footManufacture) {
         if (OTK()) {

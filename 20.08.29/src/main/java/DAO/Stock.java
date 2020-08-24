@@ -12,6 +12,8 @@ public class Stock {
         this.footBuilderStock = new HashMap<>();
     }
 
+    // Метод добавления продукции на склад
+
     public void addToStock(FootManufacture footManufacture){
         if(footBuilderStock.values().stream().anyMatch(o -> o.foots.get(0).equals(footManufacture.foots.get(0)))) {
             footBuilderStock.values().stream().filter( o -> o.foots.get(0).equals(footManufacture.foots.get(0)))
@@ -22,6 +24,8 @@ public class Stock {
             footBuilderStock.put(numberOfPart, footManufacture);
         }
     }
+
+    // Метод получения остатков на складе
 
     public void getAllFootInStock(){
         if(footBuilderStock.size() != 0) {
